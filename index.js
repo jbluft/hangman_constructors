@@ -66,7 +66,7 @@ var HangmanGame = {
         // console.log(this.chosenWord);
         console.log("Please choose a letter");
         this.chosenWord.returnValue();
-        HangmanGame.userChoosesLetter();
+        this.userChoosesLetter();
 
     },
 
@@ -82,7 +82,8 @@ var HangmanGame = {
             //   console.log(letterReturned);
               that.guessedLetters.push(letterReturned);
             //   console.log(that.guessedLetters);
-            var checkIt = HangmanGame.chosenWord.passGuessToLetters(letterReturned);
+            var checkIt = that.chosenWord.passGuessToLetters(letterReturned);
+            console.log(that.checkIt);
 
 
 
@@ -95,7 +96,7 @@ var HangmanGame = {
             //     console.log("You won");
             // }; this doesn't work either 
 
-            that.userChoosesLetter();
+            // that.userChoosesLetter();
           })},
           
 
