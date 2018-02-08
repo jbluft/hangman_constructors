@@ -38,7 +38,7 @@ var HangmanGame = {
     lossCounter: 0,
     numGuesses: 9,
 
-    chosenWord: [],
+    chosenWord: {},
 
 
   startGame: function() {
@@ -63,7 +63,7 @@ var HangmanGame = {
     playGame: function(answer) {
         this.chosenWord = new Word(this.wordsList[Math.floor(Math.random() * this.wordsList.length)]);
         numGuesses = 9;
-        // console.log(this.chosenWord);
+        console.log(this.chosenWord);
         console.log("Please choose a letter");
         this.chosenWord.returnValue();
         this.userChoosesLetter();
@@ -83,8 +83,7 @@ var HangmanGame = {
               that.guessedLetters.push(letterReturned);
             //   console.log(that.guessedLetters);
             var checkIt = that.chosenWord.passGuessToLetters(letterReturned);
-            console.log(that.checkIt);
-
+            console.log(checkIt);
 
 
             //this is where I got stuck. I can't do an if/else statement because there is no boolean value to assess against.
@@ -94,12 +93,9 @@ var HangmanGame = {
 
             // if (that.guessedLetters.toString() === that.chosenWord.toString()) {
             //     console.log("You won");
-            // }; this doesn't work either 
-
+            // };
             // that.userChoosesLetter();
           })},
-          
-
     }
 
 HangmanGame.startGame();

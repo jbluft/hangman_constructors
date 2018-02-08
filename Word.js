@@ -30,7 +30,7 @@ this.returnValue = function(){
         returnString += this.arrayLetters[i].displayValue();
         }
     console.log(returnString);
-
+    return returnString;
     }
 }
 
