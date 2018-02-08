@@ -41,6 +41,7 @@ var HangmanGame = {
     chosenWord: {},
 
 
+
   startGame: function() {
       
     // Solution is chosen randomly from wordList and sent to Word constructor.
@@ -63,7 +64,7 @@ var HangmanGame = {
     playGame: function(answer) {
         this.chosenWord = new Word(this.wordsList[Math.floor(Math.random() * this.wordsList.length)]);
         numGuesses = 9;
-        console.log(this.chosenWord);
+        // console.log(this.chosenWord);
         console.log("Please choose a letter");
         this.chosenWord.returnValue();
         this.userChoosesLetter();
@@ -83,76 +84,24 @@ var HangmanGame = {
               that.guessedLetters.push(letterReturned);
             //   console.log(that.guessedLetters);
             var checkIt = that.chosenWord.passGuessToLetters(letterReturned);
-            console.log(checkIt);
 
 
-            //this is where I got stuck. I can't do an if/else statement because there is no boolean value to assess against.
-            //I guess this needs to be somewhere in the word.js file? 
-            // console.log(checkIt);
-
-
-            // if (that.guessedLetters.toString() === that.chosenWord.toString()) {
-            //     console.log("You won");
-            // };
-            // that.userChoosesLetter();
+            that.userChoosesLetter();
+            // console.log(that.guessedLetters);
           })},
-    }
+        
+        //   var letterInWord = false;
+        //   // Check if a letter exists inside the array at all.
+        //      for (var i = 0; i < that.chosenWord.length; i++) {
+        //        if (that.chosenWord[i] === letterReturned) {
+        //          // If the letter exists then toggle this boolean to true. This will be used in the next step.
+        //          that.letterInWord = true;
+        //          console.log("Right");
+        //        } else {
+        //            console.log("wrong");
+        //        }
+        //      };
 
-HangmanGame.startGame();
+        }
 
-
-
-
-
-
-
-
-
-      
-//       ,}
-
-
-
-//         {
-//             name: "letter",
-//           message: "Please submit a letter"
-//         }
-//         //do we need to validate that the user has submitted a letter?
-    
-//       ]).then(function(answers) {
-//         // initializes the variable newGuy to be a programmer object which will take
-//         // in all of the user's answers to the questions above
-//         // var letterGuessed = new Word(tktk);
-//         // printInfo method is run to show that the newguy object was successfully created and filled
-//         console.log(answers.)
-//         newGuy.printInfo();
-//       });
-
-// }
-  
-    // Print the initial blanks in console.
-    // console.log(blanksAndSuccesses);
-
-
-//   // If we have gotten all the letters to match the solution...
-//   if (lettersInChosenWord.toString() === blanksAndSuccesses.toString()) {
-//     // ..add to the win counter & give the user an alert.
-//     winCounter++;
-// console.log("You win!");
-
-//     // Update the win counter in the HTML & restart the game.
-//     startGame();
-//   }
-
-//   // If we've run out of guesses..
-//   else if (numGuesses === 0) {
-//     // Add to the loss counter.
-//     lossCounter++;
-//     // Give the user an alert.
-//     console.log("You lose");
-//     // Restart the game.
-//     startGame();
-//   }
-
-
-
+HangmanGame.startGame();     
