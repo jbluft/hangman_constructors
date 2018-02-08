@@ -18,6 +18,7 @@ this.passGuessToLetters = function(letterReturned) {
     for (i = 0; i < this.arrayLetters.length; i++) {
         this.arrayLetters[i].checkGuess(letterReturned);
     }
+
     this.returnValue();
 };
     
@@ -36,7 +37,7 @@ this.returnValue = function(){
 // var word = new Word("test");
 // word.passGuessToLetters("e");
 // word.passGuessToLetters("t");
-// word.passGuessToLetters("a");
+// word.passGuessToLetters("z");
 
 
 module.exports = Word;

@@ -12,6 +12,7 @@ var Letter = function(letter){
         }
         else {
             return "_ ";
+            
         }
     }
 
@@ -30,9 +31,9 @@ var Letter = function(letter){
 }
 
 // testing goes here
-// var thing = new Letter("s");
+// var thing = new Letter("z");
 // thing.displayValue();
-// thing.checkGuess("u");
+// thing.checkGuess("s");
 // console.log(thing.guessed);
 
 module.exports = Letter;
